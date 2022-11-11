@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+// 色
+$c-main:#1a1a1a;
+$red:#7f4b53;
+$red2:#d5c1b9;
+
+
+$en:"JosefinSans";
+$hikki:"Allura";
+
+// ブレークポイント
+$breakpoints: (
+	"sp-down": "(max-width: 767px)",
+	"sp-up": "(min-width: 768px)",
+	"tab-down": "(max-width: 1024px)",
+	"tab-up": "(min-width: 1025px)",
+	"wide" : "(min-width: 1800px)"
+
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+$baseWidth : 1440;
+ 	@function vw($pixelsVw) {
+    @return $pixelsVw / $baseWidth * 100vw;
+}
+$baseWidth2 : 390;
+	@function vw($pixelsVw) {
+	@return $pixelsVw / $baseWidth2 * 100vw;
+}
+
+/* リセットCSS
+===================================== */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  color: $c-main;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+blockquote {
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+/* 基本設定
+===================================== */
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  color: $c-main;
+  font-weight: 500;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+.tab-show{
+	display: none;
+	@include mq('tab-down'){
+		display: block;
+	}
+}
+
+.tab-hide{
+	display: block;
+	@include mq('tab-down'){
+		display: none;
+	}
+}
+
+.sp-show{
+	display: none;
+	@include mq('sp-down'){
+		display: block;
+	}
+}
+
+.sp-hide{
+	display: block;
+	@include mq('sp-down'){
+		display: none;
+	}
+}
+
+.totop{
+	position: fixed;
+	width: 90px;
+	height: 90px;
+	background-color: #042c4c;
+	border: 1px solid #042c4c;
+	border-radius: 99px;
+	right: 70px;
+	z-index: 99;
+	bottom: 120px;
+	opacity: 0;
+	transition: all .2s;
+	@include mq('tab-down'){
+		right: 30px;
+		bottom: 50px;
+		width: 50px;
+		height: 50px;
+	}
+	&::after{
+		content: "";
+		position: absolute;
+		height: 4px;
+		width: 30px;
+		background-color:white;
+		top: 40px;
+		left: 19px;
+		transform: rotate(-45deg);
+		@include mq('tab-down'){
+			width: 20px;
+			left: 8px;
+			top:20px;
+		}
+	}
+	&::before{
+		content: "";
+		position: absolute;
+		height: 4px;
+		width: 30px;
+		background-color: white;
+		top: 40px;
+		right: 19px;
+		transform: rotate(45deg);
+		@include mq('tab-down'){
+			width: 20px;
+			right: 8px;
+			top:20px;
+		}
+	}
+	&.bottomScroll{
+		opacity: 1;
+	}
+}
+
+#loading {
+	width: 100vw;
+	height: 100vh;
+	transition: all 1s;
+	background-color: #FAFFFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	img{
+		position: absolute;
+		max-width: 400px;
+		width: 80%;
+		
+		@include mq('tab-down'){
+			top: 30vh;
+		}
+	}
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.spinner {
+	width: 100px;
+	height: 100px;
+	margin: 200px auto;
+	background-color: #2474d3;
+	border-radius: 100%;
+	animation: sk-scaleout 1.0s infinite ease-in-out;
+
+	@include mq('tab-down'){
+		position: relative;
+		top: -10vh;
+	}
+}
+
+.loaded {
+	opacity: 0;
+	visibility: hidden;
+}
+
+main{
+	overflow: hidden;
+}
+
+
+.red{
+	color: $red;
+}
+.bg-red{
+	background-color: $red;
+}
+.white{
+	color: #fff;
+}
+.bg-white{
+	background-color: #fff;
+}
+.bg-red2{
+	color: $red2;
+}
