@@ -58,6 +58,11 @@ jQuery(function($){
       $('.menu').removeClass('active');
       e.preventDefault();
     });
+    $( '.box-ttl' ).on( 'click', function(e){
+      $(this).toggleClass('active');
+      $(this).next().slideToggle(600);
+      e.preventDefault();
+    });
   });
 
 
