@@ -8,7 +8,7 @@ window.addEventListener('load', (event) => {
 
 jQuery(window).on('load', function() {
   jQuery("body").removeClass("preload");
-
+  jQuery(".hide-content").removeClass("hide-content");
 });
 
 jQuery(function($){
@@ -40,7 +40,7 @@ jQuery(function($){
       var type = 'swing';
       var href= $( this ).attr( 'href' );
       var target = $( href === '#' || href === '' ? 'html' : href );
-      var position = target.offset().top;
+      var position = target.offset().top - 64;
       $( 'html, body' ).animate( { scrollTop:position }, speed, type );
       e.preventDefault();
     });
@@ -69,10 +69,18 @@ jQuery(function($){
   $(function () {
     $(window).on("scroll", function () {
       const sliderHeight = 500;
-      if (sliderHeight + 30 < $(this).scrollTop()) {
+      if (sliderHeight < $(this).scrollTop()) {
         $(".totop").addClass("bottomScroll");
       } else {
         $(".totop").removeClass("bottomScroll");
+      }
+    });
+    $(window).on("scroll", function () {
+      const sliderHeight = 1000;
+      if (sliderHeight < $(this).scrollTop()) {
+        $("header").addClass("bottomScroll");
+      } else {
+        $("header").removeClass("bottomScroll");
       }
     });
   });
