@@ -49,10 +49,15 @@
                 </span>
                 
             </a>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
     <main>
-        <section class="fv wow fadeIn">
+        <section class="fv wow fadeIn" id="fv">
             <div class="section-inner">
                 <div class="left">
                     <h1 class="white">
@@ -93,7 +98,7 @@
                     <div class="white-wrapper">
                         <p class="bg-red white">芸能人も多数ご訪問！</p>
                         <p class="bold">完全プライベート個室空間</p>
-                        <p class="normal">ここでしかない世界観を一緒に楽しみましょう</p>
+                        <p class="normal">ここでしかない世界観を<br class="sp-show">一緒に楽しみましょう</p>
                     </div>
                 </div>
             </div>
@@ -106,9 +111,9 @@
             <div class="bg-inner">
                 <p class="red">【写真で生活をスタイリングする】</p>
                 <p class="red">それが、photostyling75cの目指すもの。</p>
-                <p class="red mt">雑誌の特集ページを撮る感覚で、「楽しい！」撮影を。</p>
+                <p class="red mt">雑誌の特集ページを撮る感覚で、<br class="sp-show">「楽しい！」撮影を。</p>
                 <p class="mt red">それぞれ異なるコンセプトの店舗にて</p>
-                <p class="red">ここでしかできない家族の時間を過ごせます。</p>
+                <p class="red">ここでしかできない<br class="sp-show">家族の時間を過ごせます。</p>
                 <p class="red mt">「いつもお客様の人生に寄り添っていきたい」</p>
                 <p class="red">そんなフォトスタジオです。</p>
                 <div class="cta bg-red2 wow fadeInUp" data-wow-offset="300">
@@ -198,21 +203,21 @@
                             <div class="card">
                                 <img src="./assets/img/ebisu1.webp" alt="クロエやディオールキッズ、ボンポワン、ボントンなどの海外ハイブランド衣装">
                                 <p>
-                                    クロエやディオールキッズ、<br>ボンポワン、ボントンなどの<br>海外ハイブランド衣装
+                                    クロエやディオールキッズ、<br class="sp-hide">ボンポワン、ボントンなどの<br class="sp-hide">海外ハイブランド衣装
                                 </p>
                             </div>
 
                             <div class="card">
                                 <img src="./assets/img/ebisu2.webp" alt="クロエやディオールキッズ、ボンポワン、ボントンなどの海外ハイブランド衣装">
                                 <p>
-                                    １点もののフランスヴィンテージ<br>小物がプラスされたスタイリング<br>が可能
+                                    １点もののフランスヴィンテージ<br class="sp-hide">小物がプラスされたスタイリング<br class="sp-hide">が可能
                                 </p>
                             </div>
 
                             <div class="card">
                                 <img src="./assets/img/ebisu3.webp" alt="クロエやディオールキッズ、ボンポワン、ボントンなどの海外ハイブランド衣装">
                                 <p>
-                                    手作りのスタジオを隅々まで<br>お楽しみください
+                                    手作りのスタジオを隅々まで<br class="sp-hide">お楽しみください
                                 </p>
                             </div>
                         </div>
@@ -221,7 +226,7 @@
                                 <table>
                                     <tr>
                                         <th class="lh2">住所</th>
-                                        <td>〒150-0022<br>東京都渋谷区恵比寿南2-24-11　ヒルトップ11　201号室</td>
+                                        <td>〒150-0022<br>東京都渋谷区恵比寿南2-24-11　<br class="sp-show">ヒルトップ11　201号室</td>
                                     </tr>
                                     <tr>
                                         <th>OPEN</th>
@@ -250,7 +255,7 @@
                                     データプラン料金
                                 </span>
                             </h5>
-                            <table>
+                            <table class="data">
                                 <tr>
                                     <th>
                                         <img src="./assets/img/dress.svg" alt="ドレス">
@@ -299,11 +304,14 @@
                                     商品セットプラン料金
                                 </span>
                             </h5>
-                            <table>
+                            <table class="set">
                                 <tr>
                                     <th>
                                         <img src="./assets/img/dress.svg" alt="ドレス">
-                                        <span>40cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>40cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥44,000</span><span class="zei">(税込)</span>
@@ -312,7 +320,10 @@
                                 <tr>
                                     <th>
                                         <img src="./assets/img/dress.svg" alt="ドレス">
-                                        <span>70cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>70cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥55,000</span><span class="zei">(税込)</span>
@@ -321,7 +332,10 @@
                                 <tr>
                                     <th>
                                         <img src="./assets/img/kimono.svg" alt="着物">
-                                        <span>30cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>30cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥66,000</span><span class="zei">(税込)</span>
@@ -333,7 +347,10 @@
                                             <img src="./assets/img/dress.svg" alt="ドレス" class="ab">
                                             <img src="./assets/img/kimono.svg" alt="着物" class="fit">
                                         </div>
-                                        <span>70cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>70cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥77,000</span><span class="zei">(税込)</span>
@@ -378,21 +395,21 @@
                             <div class="card">
                                 <img src="./assets/img/hiroo1.webp" alt="海外直輸入のスタイリッシュなベビー服をお子様に合わせてスタイリング。">
                                 <p>
-                                    海外直輸入のスタイリッシュな<br>ベビー服をお子様に合わせて<br>スタイリング。
+                                    海外直輸入のスタイリッシュな<br class="sp-hide">ベビー服をお子様に合わせて<br class="sp-hide">スタイリング。
                                 </p>
                             </div>
 
                             <div class="card">
                                 <img src="./assets/img/hiroo2.webp" alt="日々大きく成長する姿を記録。生涯忘れられないひとときを">
                                 <p>
-                                    日々大きく成長する姿を記録。<br>生涯忘れられないひとときを
+                                    日々大きく成長する姿を記録。<br class="sp-hide">生涯忘れられないひとときを
                                 </p>
                             </div>
 
                             <div class="card">
                                 <img src="./assets/img/hiroo3.webp" alt="75cでしか撮れない大人気のパンケーキ撮影で記念日をより可愛く演出！">
                                 <p>
-                                    75cでしか撮れない大人気の<br>パンケーキ撮影で記念日を<br>より可愛く演出！
+                                    75cでしか撮れない大人気の<br class="sp-hide">パンケーキ撮影で記念日を<br class="sp-hide">より可愛く演出！
                                 </p>
                             </div>
                         </div>
@@ -430,7 +447,7 @@
                                     データプラン料金
                                 </span>
                             </h5>
-                            <table>
+                            <table class="data">
                                 <tr>
                                     <th>
                                         <img src="./assets/img/dress.svg" alt="ドレス">
@@ -458,11 +475,14 @@
                                     商品セットプラン料金
                                 </span>
                             </h5>
-                            <table>
+                            <table class="set">
                                 <tr>
                                     <th>
                                         <img src="./assets/img/dress.svg" alt="ドレス">
-                                        <span>30cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>30cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥44,000</span><span class="zei">(税込)</span>
@@ -471,7 +491,10 @@
                                 <tr>
                                     <th>
                                         <img src="./assets/img/dress.svg" alt="ドレス">
-                                        <span>50cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>50cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥55,000</span><span class="zei">(税込)</span>
@@ -504,7 +527,7 @@
                         </table>
                         <div class="box-in-box bb1">
                             <p class="white bg-red2">
-                                パリと日本の高級着物が融合した<br>キッズフォーマルスタイル<br>大島紬を着こなすハイカラキッズ
+                                パリと日本の高級着物が融合した<br class="sp-hide">キッズフォーマルスタイル<br class="sp-hide">大島紬を着こなすハイカラキッズ
                             </p>
                         </div>
                         <div class="box-in-box bb1">
@@ -523,7 +546,7 @@
                             <div class="card">
                                 <img src="./assets/img/daikanyama2.webp" alt="パリのキッズフォーマルスタイル★おしゃれすぎる七五三に。">
                                 <p class="nowrap">
-                                    パリのキッズフォーマルスタイル<br>スタイル★おしゃれすぎる七五三に。
+                                    パリのキッズフォーマル<br>スタイル★おしゃれすぎる七五三に。
                                 </p>
                             </div>
 
@@ -568,7 +591,7 @@
                                     データプラン料金
                                 </span>
                             </h5>
-                            <table>
+                            <table class="data">
                                 <tr>
                                     <th>
                                         <span class="daikan-img no-after">
@@ -610,20 +633,23 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr class="fourth">
                                     <th>
-                                        <span class="daikan-img daikan-img2">
-                                            <img src="./assets/img/kimono.svg" alt="着物">
-                                        </span>
-                                        <span class="daikan-img">
-                                            <img src="./assets/img/suit.svg" alt="スーツ">
-                                        </span>
-                                        <span class="daikan-img daikan-img2">
-                                            <img src="./assets/img/kimono.svg" alt="着物">
-                                        </span>
-                                        <span class="daikan-img no-after">
-                                            <img src="./assets/img/shirt.svg" alt="シャツ">
-                                        </span>
+                                        <div class="span-wrapper2">
+                                            <span class="daikan-img daikan-img2">
+                                                <img src="./assets/img/kimono.svg" alt="着物">
+                                            </span>
+                                            <span class="daikan-img">
+                                                <img src="./assets/img/suit.svg" alt="スーツ">
+                                            </span>
+                                            <span class="daikan-img daikan-img2">
+                                                <img src="./assets/img/kimono.svg" alt="着物">
+                                            </span>
+                                            <span class="daikan-img no-after">
+                                                <img src="./assets/img/shirt.svg" alt="シャツ">
+                                            </span>
+                                        </div>
+
                                         <span>40cut</span>
                                     </th>
                                     <td>
@@ -660,7 +686,7 @@
                                     商品セットプラン料金
                                 </span>
                             </h5>
-                            <table>
+                            <table class="set">
                                 <tr>
                                     <th>
                                         <span class="daikan-img no-after">
@@ -675,7 +701,10 @@
                                         <span class="daikan-img no-after">
                                             <img src="./assets/img/shirt.svg" alt="シャツ">
                                         </span>
-                                        <span>20cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>20cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥44,000</span><span class="zei">(税込)</span>
@@ -695,28 +724,37 @@
                                         <span class="daikan-img no-after">
                                             <img src="./assets/img/shirt.svg" alt="シャツ">
                                         </span>
-                                        <span>40cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>40cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥55,000</span><span class="zei">(税込)</span>
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr class="fourth">
                                     <th>
-                                        <span class="daikan-img daikan-img2">
-                                            <img src="./assets/img/kimono.svg" alt="着物">
-                                        </span>
-                                        <span class="daikan-img">
-                                            <img src="./assets/img/suit.svg" alt="スーツ">
-                                        </span>
-                                        <span class="daikan-img daikan-img2">
-                                            <img src="./assets/img/kimono.svg" alt="着物">
-                                        </span>
-                                        <span class="daikan-img no-after">
-                                            <img src="./assets/img/shirt.svg" alt="シャツ">
-                                        </span>
-                                        <span>40cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper2">
+                                            <span class="daikan-img daikan-img2">
+                                                <img src="./assets/img/kimono.svg" alt="着物">
+                                            </span>
+                                            <span class="daikan-img">
+                                                <img src="./assets/img/suit.svg" alt="スーツ">
+                                            </span>
+                                            <span class="daikan-img daikan-img2">
+                                                <img src="./assets/img/kimono.svg" alt="着物">
+                                            </span>
+                                            <span class="daikan-img no-after">
+                                                <img src="./assets/img/shirt.svg" alt="シャツ">
+                                            </span>
+                                        </div>
+
+                                        <div class="span-wrapper">
+                                            <span>40cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥66,000</span><span class="zei">(税込)</span>
@@ -737,7 +775,10 @@
                                         <span class="daikan-img no-after">
                                             <img src="./assets/img/kimono.svg" alt="着物">
                                         </span>
-                                        <span>70cut</span><span class="item">+item</span>
+                                        <div class="span-wrapper">
+                                            <span>70cut</span><span class="item">+item</span>
+                                        </div>
+                                        
                                     </th>
                                     <td>
                                         <span>￥77,000</span><span class="zei">(税込)</span>
@@ -871,7 +912,7 @@
                         <div class="flex">
                             <div class="left">
                                 <h4 class="red">仮予約</h4>
-                                <p class="red">ご予約フォーム、もしくは公式LINEからお問い合わせください。<br>ご予約は1年先まで受け付け♪<br>当日予約は、お気軽にお電話でお問い合わせください。</p>
+                                <p class="red">ご予約フォーム、もしくは公式LINEから<br class="sp-show">お問い合わせください。<br class="sp-hide">ご予約は<br class="sp-show">1年先まで受け付け♪<br class="sp-hide">当日予約は、お気軽に<br class="sp-show">お電話でお問い合わせください。</p>
                                 <p class="tel">
                                     <img src="./assets/img/tel.svg" alt="tel"><a href="tel:03-5768-3928">03-5768-3928</a>
                                 </p>
@@ -927,9 +968,9 @@
                         <div class="flex">
                             <div class="left">
                                 <h4 class="red">カウンセリング・衣装選び</h4>
-                                <p class="red">撮影の流れについてご説明いたします。どんな写真にしたいか、<br>どんな記念日なのかなど、お客さまのご希望などもお伺いします。<br>クロエやディオールキッズなど海外のハイブランド衣装、<br>オリジナルリバティ生地や大島紬の着物など、ここでしか着られない衣装が満載♪</p>
-                                <ul>
-                                    <li class="red">当日の所要時間は、各スタジオの紹介ページにてご確認くださいませ。</li>
+                                <p class="red">撮影の流れについてご説明いたします。<br class="sp-show">どんな写真にしたいか、<br class="sp-hide">どんな記念日なのかなど、<br class="sp-show">お客さまのご希望などもお伺いします。<br>クロエやディオールキッズなど<br class="sp-show">海外のハイブランド衣装、<br>オリジナルリバティ生地や大島紬の着物など、<br class="sp-show">ここでしか着られない衣装が満載♪</p>
+                                <ul class="step5-ul">
+                                    <li class="red">当日の所要時間は、各スタジオの<br class="sp-show">紹介ページにてご確認くださいませ。</li>
                                 </ul>
                             </div>
                             <div class="right">
@@ -946,7 +987,7 @@
                         <div class="flex">
                             <div class="left">
                                 <h4 class="red">撮影</h4>
-                                <p class="red">撮影を担当するのは、経験豊かなフォトグラファーたち。お声がけ<br>しながらポージングのアドバイスもするので、リラックスした雰囲気<br>の中、撮影ができます。撮影はとてもアットホームで家族の思い出に<br>残る時間になること間違いなし。家族の時間を過ごせるセカンドハウスです。</p>
+                                <p class="red">撮影を担当するのは、経験豊かな<br class="sp-show">フォトグラファーたち。お声がけ<br class="sp-hide">しながら<br class="sp-show">ポージングのアドバイスもするので、<br class="sp-show">リラックスした雰囲気<br class="sp-hide">の中、撮影ができます。撮影はとてもアットホームで家族の思い出に<br>残る時間になること間違いなし。<br class="sp-show">家族の時間を過ごせるセカンドハウスです。</p>
                             </div>
                             <div class="right">
                                 <img src="./assets/img/step6.svg" alt="step6">
@@ -962,7 +1003,7 @@
                         <div class="flex">
                             <div class="left">
                                 <h4 class="red">データ発送</h4>
-                                <p class="red">LINE送付は翌日までに、データお渡しは当日～1週間目処となります。</p>
+                                <p class="red">LINE送付は翌日までに、<br class="sp-show">データお渡しは当日～1週間目処となります。</p>
                             </div>
                             <div class="right">
                                 <img src="./assets/img/step7.svg" alt="step7">
@@ -993,7 +1034,7 @@
                 <div class="flex2">
                     <div class="left">
                         <h2 class="hikki">Photostyling 75c</h2>
-                        <p class="red">
+                        <p class="red has-heart">
                             プライベート個室空間で<br>カメラマンは経験豊富で、お子様との<br>コミュニケーションもスムーズ
                         </p>
                     </div>
@@ -1022,7 +1063,7 @@
                         <div class="right">
                             <h2 class="red">素敵な写真ばかりで嬉しい</h2>
                             <p class="red">
-                                ヤンチャな息子にあの手この手と、たくさん工夫していただき<br>ありがとうございました！今回も素敵な写真ばかりで嬉しいです♪<br>大変だったのにちゃんと撮っていただき流石プロ( ;∀;)<br>本当にありがとうございました！！
+                                ヤンチャな息子にあの手この手と、たくさん<br class="sp-show">工夫していただき<br class="sp-hide">ありがとうございました！<br class="sp-show">今回も素敵な写真ばかりで嬉しいです♪<br>大変だったのにちゃんと撮って<br class="sp-show">いただき流石プロ( ;∀;)<br>本当にありがとうございました！！
                             </p>
                         </div>
                     </div>
@@ -1034,8 +1075,10 @@
                         <div class="right">
                             <h2 class="red">行く前から大喜び！</h2>
                             <p class="red">
-                                子ども達は、行く前から「やったー！75cだー！」<br>と言っているのでまた是非とも＾＾
+                                子ども達は、行く前から<br class="sp-show">「やったー！75cだー！」<br>と言っているのでまた是非とも＾＾
+                                
                             </p>
+                            
                         </div>
                     </div>
 

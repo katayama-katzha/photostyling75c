@@ -12,48 +12,61 @@ jQuery(window).on('load', function() {
 });
 
 jQuery(function($){
+  
+  $(window).on('load resize', function() {
+    var client_h = document.getElementById('fv').clientHeight;
+    $(window).on("scroll", function () {
+      const sliderHeight = client_h;
+      if (sliderHeight < $(this).scrollTop()) {
+        $("header").addClass("bottomScroll");
+      } else {
+        $("header").removeClass("bottomScroll");
+      }
+    });
+  });
+
   $(function(){
     if (window.matchMedia('(max-width: 767px)').matches){
-      $('#items .card:nth-child(2n + 1)').attr('data-wow-delay', '0.2s');
 
     }else{
 
-    }
+
+    };
    
-    $(window).resize(function() {
+
+  }());
+  $(window).resize(function() {
     if (window.matchMedia('(max-width: 767px)').matches){
-      $('#items .card:nth-child(2n + 1)').attr('data-wow-delay', '0.2s');
 
     }else{
-      $('#items .card:nth-child(3n + 1)').attr('data-wow-delay', '0.2s');
 
     }
-  
-    
-  
-  
   });
-  }());
   $( function() {
     $( 'a[href^="#"]' ).on( 'click', function(e){
       var speed = 500;
       var type = 'swing';
       var href= $( this ).attr( 'href' );
       var target = $( href === '#' || href === '' ? 'html' : href );
-      var position = target.offset().top - 64;
+      
+      if (window.matchMedia('(max-width: 767px)').matches){
+        var position = target.offset().top - 50;
+      }else{
+        var position = target.offset().top - 64;
+      }
       $( 'html, body' ).animate( { scrollTop:position }, speed, type );
       e.preventDefault();
     });
+
   });
 
   $( function() {
     $( '.burger' ).on( 'click', function(e){
       $(this).toggleClass('active');
-      $('.right').toggleClass('active');
       $('.menu').toggleClass('active');
       e.preventDefault();
     });
-    $( '.close' ).on( 'click', function(e){
+    $( '.menu a' ).on( 'click', function(e){
       $('.burger').removeClass('active');
       $('.menu').removeClass('active');
       e.preventDefault();
@@ -75,14 +88,9 @@ jQuery(function($){
         $(".totop").removeClass("bottomScroll");
       }
     });
-    $(window).on("scroll", function () {
-      const sliderHeight = 1000;
-      if (sliderHeight < $(this).scrollTop()) {
-        $("header").addClass("bottomScroll");
-      } else {
-        $("header").removeClass("bottomScroll");
-      }
-    });
+
+    
+
   });
 
 
