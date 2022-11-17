@@ -27,7 +27,8 @@ jQuery(function($){
 
   $(function(){
     if (window.matchMedia('(max-width: 767px)').matches){
-
+      $('.sp150').attr('data-wow-offset', '150');
+      $('.sp100').attr('data-wow-offset', '100');
     }else{
 
 

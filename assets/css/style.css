@@ -1117,6 +1117,7 @@ header .burger.active span:last-child {
   padding-left: 0.8333333333vw;
   padding-right: 2.0833333333vw;
   padding-top: 0.3472222222vw;
+  margin-bottom: -1px;
 }
 @media (max-width: 767px) {
   .cta > div .ttl h5 {

@@ -1051,6 +1051,7 @@ header{
 				padding-left: vw(12);
 				padding-right: vw(30);
 				padding-top: vw(5);
+				margin-bottom: -1px;
 				@include mq('sp-down'){
 					font-size: vw2(18);
 					padding-left: vw2(12);
