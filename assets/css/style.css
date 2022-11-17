@@ -444,7 +444,8 @@ header .burger.active span:last-child {
   content: "";
   display: block;
   position: absolute;
-  width: calc(100% + 2px);
+  width: calc(100% + 4px);
+  left: -2px;
   height: 100%;
   background-image: linear-gradient(to right, #3a1c71, #ffaf7b);
   opacity: 1;
