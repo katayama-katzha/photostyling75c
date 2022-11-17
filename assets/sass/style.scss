@@ -325,7 +325,7 @@ header{
 		.reserve-btn{
 			right: 0;
 			height: 100%;
-			width: 248px;
+			width: vw(248);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -371,6 +371,9 @@ header{
 					font-size: vw(14);
 					color: white;
 					position: relative;
+					@include mq('sp-down'){
+						font-size: 12px;
+					}
 					&::after{
 						content: "";
 						width: 0%;
@@ -381,12 +384,15 @@ header{
 						bottom: -4px;
 						transition: all .3s;
 					}
-					&:hover{
-						&::after{
-							width: 100%;
-							left: 0;
+					@include mq('sp-up'){
+						&:hover{
+							&::after{
+								width: 100%;
+								left: 0;
+							}
 						}
 					}
+
 				}
 			}
 		}
@@ -469,14 +475,17 @@ header{
 		background-image: linear-gradient(110deg, #3a1c71 2%, #d76d77 58%, #ffaf7b 103%);
 	  }
 	}
-  
-	&:hover{
-	  border-right: 1px solid #3a1c71;
-	  border-left: 1px solid #ffaf7b;
-	  &::before{
-		opacity: 0;
-	  }
+	@include mq('sp-up'){
+		&:hover{
+			border-right: 1px solid #3a1c71;
+			border-left: 1px solid #ffaf7b;
+			&::before{
+			  opacity: 0;
+			}
+		}
 	}
+  
+
 }
 
 .fv{
@@ -587,7 +596,7 @@ header{
 			@include mq('sp-down'){
 				position: absolute;
 				bottom: unset;
-				top: vw2(130);
+				top: vw2(129);
 				width: 100%;
 			}
 		}
@@ -1120,6 +1129,23 @@ header{
 		background-color: #fff;
 		transition: all .3s;
 		top: 0;
+		&::before{
+			content: "";
+			position: absolute;
+			width: vw(14);
+			height: vw(15);
+			background-color: $red;
+			clip-path: polygon(0 0, 0% 100%, 100% 50%);
+			right: vw(28);
+			top: calc(50% - vw(7));
+			transition: all .3s;
+			@include mq('sp-down'){
+				width: vw2(14);
+				height: vw2(15);
+				right: vw2(10);
+				top: calc(50% - vw2(7));
+			}
+		}
 		@include mq('sp-down'){
 			width: vw2(265);
 			line-height: vw2(50);
@@ -1146,22 +1172,7 @@ header{
 				top: calc(50% - vw2(10));
 			}
 		}
-		svg{
-			width: vw(14);
-			height: vw(15);
-			right: vw(28);
-			top: calc(50% - vw(7));
-			@include mq('sp-down'){
-				width: vw2(14);
-				height: vw2(15);
-				right: vw2(11);
-				top: calc(50% - vw2(7));
-			}
-			g,path{
-				transition: all .3s;
-				transition-timing-function: linear;
-			}
-		}
+
 		&::after{
 			position: absolute;
 			content: "";
@@ -1173,30 +1184,30 @@ header{
 			border-radius: 0px;
 			transition: all .4s;
 		}
-		&:hover{
-			top: -3px;
-			box-shadow: 0 5px 1px gray;
-			span{
-				color: white;
-			}
-			&::after{
-				width: 100%;
-				left: 0;
-				border-radius: 99px;
-			}
-			svg{
-				g{
-					fill: white;
+		@include mq('sp-up'){
+			&:hover{
+				top: -3px;
+				box-shadow: 0 5px 1px gray;
+				span{
+					color: white;
 				}
-				path:last-child{
-					fill: white;
+				&::before{
+					background-color: #fff;
+					z-index: 4;
 				}
+				&::after{
+					width: 100%;
+					left: 0;
+					border-radius: 99px;
+				}
+	
+			}
+			&:active{
+				top: 0;
+				box-shadow: none;
 			}
 		}
-		&:active{
-			top: 0;
-			box-shadow: none;
-		}
+
 	}
 	.booking-btn{
 		display: block;
@@ -1230,14 +1241,17 @@ header{
 		&::before{
 			border-radius: 99px;
 		}
-		&:hover{
-			top: -3px;
-			box-shadow: 0 5px 1px gray;
+		@include mq('sp-up'){
+			&:hover{
+				top: -3px;
+				box-shadow: 0 5px 1px gray;
+			}
+			&:active{
+				top: 0;
+				box-shadow: none;
+			}
 		}
-		&:active{
-			top: 0;
-			box-shadow: none;
-		}
+
 	}
 }
 
@@ -1537,7 +1551,10 @@ header{
 							}
 						}
 						.nowrap{
-							white-space: nowrap;
+							
+							@include mq('tab-up'){
+								white-space: nowrap;
+							}
 						}
 					}
 				}
@@ -1739,6 +1756,7 @@ header{
 									}
 								}
 								.span-wrapper{
+									display: inline;
 									@include mq('sp-down'){
 										display: flex;
 										flex-direction: column;
@@ -1805,11 +1823,16 @@ header{
 								.daikan-img{
 									height: 40px;
 									&::after{
-										right: 2px;
+										right: 4px;
+										@include mq('sp-down'){
+											right: 1.5px;
+										}
 									}
 								}
 								img{
-									width: 35px;
+									@include mq('sp-down'){
+										width: 35px;
+									}	
 								}
 							}
 						}
@@ -1817,19 +1840,25 @@ header{
 							th,td{
 								height: 80px;
 								.span-wrapper2{
-									display: flex;
-									flex-wrap: wrap;
-									width: 70px;
-									margin-left: 70px;
-									.daikan-img:not(.daikan-img2){
-										img{
-											width: 30px;
-										}
-										&::after{
-											right: 35px;
-											top: 20px;
+									@include mq('sp-up'){
+										display: inline;
+									}
+									@include mq('sp-down'){
+										display: flex;
+										flex-wrap: wrap;
+										width: 70px;
+										margin-left: 70px;
+										.daikan-img:not(.daikan-img2){
+											img{
+												width: 30px;
+											}
+											&::after{
+												right: 35px;
+												top: 20px;
+											}
 										}
 									}
+
 								}
 							}
 						}
@@ -2175,11 +2204,14 @@ header{
 									left: 0;
 									transition: all .3s;
 								}
-								&:hover{
-									&::after{
-										height: 2px;
+								@include mq('sp-up'){
+									&:hover{
+										&::after{
+											height: 2px;
+										}
 									}
 								}
+
 							}
 						}
 						ul{
@@ -2367,14 +2399,15 @@ header{
 					position: relative;
 					&::after{
 						content: "";
-						width:20px;
-						height: 20px;
+						width:vw(20);
+						height: vw(20);
 						background-image: url(../img/heart.svg);
 						position: absolute;
 						background-size: contain;
 						background-repeat: no-repeat;
 						background-position: center;
-
+						margin-top: vw(14);
+						margin-left: vw(3);
 						@include mq('sp-down'){
 							width: 15px;
 							height: 15px;
@@ -2821,11 +2854,14 @@ header{
 						&::before{
 						  background-image: linear-gradient(to right, #dc2424,#480048);
 						}
-					  
-						&:hover{
-						  border-right: 1px solid #480048;
-						  border-left: 1px solid #dc2424;
+						@include mq('sp-up'){
+							&:hover{
+								border-right: 1px solid #480048;
+								border-left: 1px solid #dc2424;
+							}
 						}
+					  
+
 					}
 				}
 			}
@@ -2874,12 +2910,15 @@ footer{
 			bottom: -4px;
 			transition: all .3s;
 		}
-		&:hover{
-			&::after{
-				width: 100%;
-				left: 0;
+		@include mq('sp-up'){
+			&:hover{
+				&::after{
+					width: 100%;
+					left: 0;
+				}
 			}
 		}
+
 	}
 	ul{
 		display: flex;

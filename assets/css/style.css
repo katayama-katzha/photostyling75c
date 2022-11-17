@@ -308,7 +308,7 @@ header .header-inner .logo img {
 header .header-inner .reserve-btn {
   right: 0;
   height: 100%;
-  width: 248px;
+  width: 17.2222222222vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,6 +362,11 @@ header .header-inner ul li a {
   color: white;
   position: relative;
 }
+@media (max-width: 767px) {
+  header .header-inner ul li a {
+    font-size: 12px;
+  }
+}
 header .header-inner ul li a::after {
   content: "";
   width: 0%;
@@ -372,9 +377,11 @@ header .header-inner ul li a::after {
   bottom: -4px;
   transition: all 0.3s;
 }
-header .header-inner ul li a:hover::after {
-  width: 100%;
-  left: 0;
+@media (min-width: 768px) {
+  header .header-inner ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
 }
 
 header.bottomScroll .burger span {
@@ -449,12 +456,14 @@ header .burger.active span:last-child {
     background-image: linear-gradient(110deg, #3a1c71 2%, #d76d77 58%, #ffaf7b 103%);
   }
 }
-.reserve-btn:hover {
-  border-right: 1px solid #3a1c71;
-  border-left: 1px solid #ffaf7b;
-}
-.reserve-btn:hover::before {
-  opacity: 0;
+@media (min-width: 768px) {
+  .reserve-btn:hover {
+    border-right: 1px solid #3a1c71;
+    border-left: 1px solid #ffaf7b;
+  }
+  .reserve-btn:hover::before {
+    opacity: 0;
+  }
 }
 
 .fv {
@@ -582,7 +591,7 @@ header .burger.active span:last-child {
   .fv .section-inner .right {
     position: absolute;
     bottom: unset;
-    top: 33.3333333333vw;
+    top: 33.0769230769vw;
     width: 100%;
   }
 }
@@ -1195,6 +1204,25 @@ header .burger.active span:last-child {
   transition: all 0.3s;
   top: 0;
 }
+.btn-wrapper .line-btn::before {
+  content: "";
+  position: absolute;
+  width: 0.9722222222vw;
+  height: 1.0416666667vw;
+  background-color: #7f4b53;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  right: 1.9444444444vw;
+  top: calc(50% - 0.4861111111vw);
+  transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .btn-wrapper .line-btn::before {
+    width: 3.5897435897vw;
+    height: 3.8461538462vw;
+    right: 2.5641025641vw;
+    top: calc(50% - 1.7948717949vw);
+  }
+}
 @media (max-width: 767px) {
   .btn-wrapper .line-btn {
     width: 67.9487179487vw;
@@ -1225,24 +1253,6 @@ header .burger.active span:last-child {
     top: calc(50% - 2.5641025641vw);
   }
 }
-.btn-wrapper .line-btn svg {
-  width: 0.9722222222vw;
-  height: 1.0416666667vw;
-  right: 1.9444444444vw;
-  top: calc(50% - 0.4861111111vw);
-}
-@media (max-width: 767px) {
-  .btn-wrapper .line-btn svg {
-    width: 3.5897435897vw;
-    height: 3.8461538462vw;
-    right: 2.8205128205vw;
-    top: calc(50% - 1.7948717949vw);
-  }
-}
-.btn-wrapper .line-btn svg g, .btn-wrapper .line-btn svg path {
-  transition: all 0.3s;
-  transition-timing-function: linear;
-}
 .btn-wrapper .line-btn::after {
   position: absolute;
   content: "";
@@ -1254,27 +1264,27 @@ header .burger.active span:last-child {
   border-radius: 0px;
   transition: all 0.4s;
 }
-.btn-wrapper .line-btn:hover {
-  top: -3px;
-  box-shadow: 0 5px 1px gray;
-}
-.btn-wrapper .line-btn:hover span {
-  color: white;
-}
-.btn-wrapper .line-btn:hover::after {
-  width: 100%;
-  left: 0;
-  border-radius: 99px;
-}
-.btn-wrapper .line-btn:hover svg g {
-  fill: white;
-}
-.btn-wrapper .line-btn:hover svg path:last-child {
-  fill: white;
-}
-.btn-wrapper .line-btn:active {
-  top: 0;
-  box-shadow: none;
+@media (min-width: 768px) {
+  .btn-wrapper .line-btn:hover {
+    top: -3px;
+    box-shadow: 0 5px 1px gray;
+  }
+  .btn-wrapper .line-btn:hover span {
+    color: white;
+  }
+  .btn-wrapper .line-btn:hover::before {
+    background-color: #fff;
+    z-index: 4;
+  }
+  .btn-wrapper .line-btn:hover::after {
+    width: 100%;
+    left: 0;
+    border-radius: 99px;
+  }
+  .btn-wrapper .line-btn:active {
+    top: 0;
+    box-shadow: none;
+  }
 }
 .btn-wrapper .booking-btn {
   display: block;
@@ -1313,13 +1323,15 @@ header .burger.active span:last-child {
 .btn-wrapper .booking-btn::before {
   border-radius: 99px;
 }
-.btn-wrapper .booking-btn:hover {
-  top: -3px;
-  box-shadow: 0 5px 1px gray;
-}
-.btn-wrapper .booking-btn:active {
-  top: 0;
-  box-shadow: none;
+@media (min-width: 768px) {
+  .btn-wrapper .booking-btn:hover {
+    top: -3px;
+    box-shadow: 0 5px 1px gray;
+  }
+  .btn-wrapper .booking-btn:active {
+    top: 0;
+    box-shadow: none;
+  }
 }
 
 .studio {
@@ -1649,8 +1661,10 @@ header .burger.active span:last-child {
     display: none;
   }
 }
-.studio .section-inner .box .content .flex .card .nowrap {
-  white-space: nowrap;
+@media (min-width: 1025px) {
+  .studio .section-inner .box .content .flex .card .nowrap {
+    white-space: nowrap;
+  }
 }
 .studio .section-inner .box .content .table-wrapper {
   padding-left: 80px;
@@ -1855,6 +1869,9 @@ header .burger.active span:last-child {
     font-size: 12px;
   }
 }
+.studio .section-inner .box .content .plan table tr th .span-wrapper {
+  display: inline;
+}
 @media (max-width: 767px) {
   .studio .section-inner .box .content .plan table tr th .span-wrapper {
     display: flex;
@@ -1912,26 +1929,40 @@ header .burger.active span:last-child {
   height: 40px;
 }
 .studio #daikan-yama .box .content .plan .data tr th .daikan-img::after, .studio #daikan-yama .box .content .plan .set tr th .daikan-img::after {
-  right: 2px;
+  right: 4px;
 }
-.studio #daikan-yama .box .content .plan .data tr th img, .studio #daikan-yama .box .content .plan .set tr th img {
-  width: 35px;
+@media (max-width: 767px) {
+  .studio #daikan-yama .box .content .plan .data tr th .daikan-img::after, .studio #daikan-yama .box .content .plan .set tr th .daikan-img::after {
+    right: 1.5px;
+  }
+}
+@media (max-width: 767px) {
+  .studio #daikan-yama .box .content .plan .data tr th img, .studio #daikan-yama .box .content .plan .set tr th img {
+    width: 35px;
+  }
 }
 .studio #daikan-yama .box .content .plan .data .fourth th, .studio #daikan-yama .box .content .plan .data .fourth td, .studio #daikan-yama .box .content .plan .set .fourth th, .studio #daikan-yama .box .content .plan .set .fourth td {
   height: 80px;
 }
-.studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 {
-  display: flex;
-  flex-wrap: wrap;
-  width: 70px;
-  margin-left: 70px;
+@media (min-width: 768px) {
+  .studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 {
+    display: inline;
+  }
 }
-.studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2) img, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2) img, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2) img, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2) img {
-  width: 30px;
-}
-.studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2)::after, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2)::after, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2)::after, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2)::after {
-  right: 35px;
-  top: 20px;
+@media (max-width: 767px) {
+  .studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70px;
+    margin-left: 70px;
+  }
+  .studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2) img, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2) img, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2) img, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2) img {
+    width: 30px;
+  }
+  .studio #daikan-yama .box .content .plan .data .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2)::after, .studio #daikan-yama .box .content .plan .data .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2)::after, .studio #daikan-yama .box .content .plan .set .fourth th .span-wrapper2 .daikan-img:not(.daikan-img2)::after, .studio #daikan-yama .box .content .plan .set .fourth td .span-wrapper2 .daikan-img:not(.daikan-img2)::after {
+    right: 35px;
+    top: 20px;
+  }
 }
 
 .check {
@@ -2323,8 +2354,10 @@ header .burger.active span:last-child {
   left: 0;
   transition: all 0.3s;
 }
-.flow .section-inner .inner-inner .step .flex .left .tel a:hover::after {
-  height: 2px;
+@media (min-width: 768px) {
+  .flow .section-inner .inner-inner .step .flex .left .tel a:hover::after {
+    height: 2px;
+  }
 }
 .flow .section-inner .inner-inner .step .flex .left ul {
   padding-top: 0.7638888889vw;
@@ -2527,13 +2560,15 @@ header .burger.active span:last-child {
 }
 .photograph .section-inner .flex2 .left .has-heart::after {
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 1.3888888889vw;
+  height: 1.3888888889vw;
   background-image: url(../img/heart.svg);
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 0.9722222222vw;
+  margin-left: 0.2083333333vw;
 }
 @media (max-width: 767px) {
   .photograph .section-inner .flex2 .left .has-heart::after {
@@ -3018,9 +3053,11 @@ header .burger.active span:last-child {
 .showtime .section-inner .white2 .inner .btn-wrapper .reserve-btn::before {
   background-image: linear-gradient(to right, #dc2424, #480048);
 }
-.showtime .section-inner .white2 .inner .btn-wrapper .reserve-btn:hover {
-  border-right: 1px solid #480048;
-  border-left: 1px solid #dc2424;
+@media (min-width: 768px) {
+  .showtime .section-inner .white2 .inner .btn-wrapper .reserve-btn:hover {
+    border-right: 1px solid #480048;
+    border-left: 1px solid #dc2424;
+  }
 }
 
 footer {
@@ -3072,9 +3109,11 @@ footer a::after {
   bottom: -4px;
   transition: all 0.3s;
 }
-footer a:hover::after {
-  width: 100%;
-  left: 0;
+@media (min-width: 768px) {
+  footer a:hover::after {
+    width: 100%;
+    left: 0;
+  }
 }
 footer ul {
   display: flex;
