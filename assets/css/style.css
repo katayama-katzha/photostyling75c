@@ -1953,7 +1953,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio #daikan-yama .box .content .plan .data tr th .daikan-img::after, .studio #daikan-yama .box .content .plan .set tr th .daikan-img::after {
-    right: 1.5px;
+    right: 1px;
   }
 }
 @media (max-width: 767px) {
