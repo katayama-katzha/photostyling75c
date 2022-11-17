@@ -540,7 +540,7 @@ header .burger.active span:last-child {
   .fv .section-inner .left h2 {
     height: auto;
     width: 69.7435897436vw;
-    margin-top: 1.2820512821vw;
+    margin-top: 0.5128205128vw;
   }
 }
 .fv .section-inner .left h2::before {
@@ -1504,37 +1504,24 @@ header .burger.active span:last-child {
 }
 .studio .section-inner .box .content .shop-about th {
   width: 200px;
-  padding-left: 30px;
   display: flex;
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th {
-    width: 100px;
-    padding-left: 24px;
+    width: 80px;
   }
 }
-.studio .section-inner .box .content .shop-about td {
-  width: 100%;
-  padding-right: 30px;
+.studio .section-inner .box .content .shop-about th .th-wrapper {
+  position: relative;
+  padding-left: 30px;
+  color: #7f4b53;
 }
 @media (max-width: 767px) {
-  .studio .section-inner .box .content .shop-about td {
-    padding-right: 0px;
+  .studio .section-inner .box .content .shop-about th .th-wrapper {
+    padding-left: 15px;
   }
 }
-.studio .section-inner .box .content .shop-about tr {
-  border-left: 2px solid #7f4b53;
-  border-right: 2px solid #7f4b53;
-  position: relative;
-}
-.studio .section-inner .box .content .shop-about tr:first-child th, .studio .section-inner .box .content .shop-about tr:first-child td {
-  padding-bottom: 14px;
-  padding-top: 5px;
-}
-.studio .section-inner .box .content .shop-about tr:last-child th.td {
-  padding-bottom: 5px;
-}
-.studio .section-inner .box .content .shop-about tr::before {
+.studio .section-inner .box .content .shop-about th .th-wrapper::before {
   content: "";
   width: 4px;
   height: 100%;
@@ -1544,11 +1531,19 @@ header .burger.active span:last-child {
   top: 0;
 }
 @media (max-width: 767px) {
-  .studio .section-inner .box .content .shop-about tr::before {
-    left: 0px;
+  .studio .section-inner .box .content .shop-about th .th-wrapper::before {
+    left: 2px;
   }
 }
-.studio .section-inner .box .content .shop-about tr::after {
+.studio .section-inner .box .content .shop-about td {
+  width: 100%;
+}
+.studio .section-inner .box .content .shop-about td .td-wrapper {
+  padding-right: 30px;
+  color: #7f4b53;
+  position: relative;
+}
+.studio .section-inner .box .content .shop-about td .td-wrapper::after {
   content: "";
   width: 4px;
   height: 100%;
@@ -1558,9 +1553,26 @@ header .burger.active span:last-child {
   top: 0;
 }
 @media (max-width: 767px) {
-  .studio .section-inner .box .content .shop-about tr::after {
-    right: 0px;
+  .studio .section-inner .box .content .shop-about td .td-wrapper::after {
+    right: 2px;
   }
+}
+@media (max-width: 767px) {
+  .studio .section-inner .box .content .shop-about td .td-wrapper {
+    padding-right: 0px;
+  }
+}
+.studio .section-inner .box .content .shop-about tr {
+  border-left: 2px solid #7f4b53;
+  border-right: 2px solid #7f4b53;
+  position: relative;
+}
+.studio .section-inner .box .content .shop-about tr:first-child .th-wrapper, .studio .section-inner .box .content .shop-about tr:first-child .td-wrapper {
+  padding-bottom: 14px;
+  padding-top: 5px;
+}
+.studio .section-inner .box .content .shop-about tr:last-child .th-wrapper.td {
+  padding-bottom: 5px;
 }
 .studio .section-inner .box .content .box-in-box {
   display: flex;
@@ -1583,6 +1595,7 @@ header .burger.active span:last-child {
     margin-right: 10px;
     padding-left: 0;
     padding-right: 0;
+    font-size: 4.6153846154vw;
     width: calc(100% - 20px);
   }
 }
@@ -1835,8 +1848,8 @@ header .burger.active span:last-child {
   position: relative;
 }
 .studio .section-inner .box .content .plan table tr th .img-wrapper .ab {
-  position: absolute;
-  left: -35px;
+  margin-right: -15px;
+  margin-left: -35px;
 }
 .studio .section-inner .box .content .plan table tr th .daikan-img {
   margin-left: -5px;
@@ -1851,6 +1864,12 @@ header .burger.active span:last-child {
   font-weight: normal;
   position: absolute;
   right: 4px;
+  top: -10px;
+}
+@media (max-width: 767px) {
+  .studio .section-inner .box .content .plan table tr th .daikan-img::after {
+    top: 0;
+  }
 }
 .studio .section-inner .box .content .plan table tr th .daikan-img .opa0 {
   opacity: 0;
@@ -3042,7 +3061,7 @@ header .burger.active span:last-child {
   .showtime .section-inner .white2 .inner .btn-wrapper {
     padding-bottom: 10.2564102564vw;
     width: 67.9487179487vw;
-    margin-left: -7.6923076923vw;
+    margin-left: -5.1282051282vw;
   }
 }
 .showtime .section-inner .white2 .inner .btn-wrapper .reserve-btn {

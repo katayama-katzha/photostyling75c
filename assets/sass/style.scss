@@ -552,7 +552,7 @@ header{
 				@include mq('sp-down'){
 					height: auto;
 					width: vw2(272);
-					margin-top: vw2(5);
+					margin-top: vw2(2);
 				}
 				&::before{
 					content: "";
@@ -1411,59 +1411,74 @@ header{
 					}
 					th{
 						width: 200px;
-						padding-left: 30px;
+						
 						display: flex;
 						@include mq('sp-down'){
-							width: 100px;
-							padding-left: 24px;
+							width: 80px;
+							
+						}
+						.th-wrapper{
+							position: relative;
+							padding-left: 30px;
+							color: $red;
+							@include mq('sp-down'){
+								padding-left: 15px;
+							}
+							&::before{
+								content: "";
+								width: 4px;
+								height: 100%;
+								background-color: $red;
+								position: absolute;
+								left: 4px;
+								top: 0;
+								@include mq('sp-down'){
+									left: 2px;
+								}
+							}
+
 						}
 					}
 					td{
 						width: 100%;
-						padding-right: 30px;
-						@include mq('sp-down'){
-							padding-right: 0px;
+						.td-wrapper{
+							padding-right: 30px;
+							color: $red;
+							position: relative;
+							&::after{
+								content: "";
+								width: 4px;
+								height: 100%;
+								background-color: $red;
+								position: absolute;
+								right: 4px;
+								top: 0;
+								@include mq('sp-down'){
+									right: 2px;
+								}
+							}
+							@include mq('sp-down'){
+								padding-right: 0px;
+							}
 						}
 					}
 					tr{
 						border-left: 2px solid $red;
 						border-right: 2px solid $red;
+
 						&:first-child{
-							th,td{
+							.th-wrapper,.td-wrapper{
 								padding-bottom: 14px;
 								padding-top: 5px;
 							}
 						}
 						&:last-child{
-							th.td{
+							.th-wrapper.td{
 								padding-bottom: 5px;
 							}
 						}
 						position: relative;
-						&::before{
-							content: "";
-							width: 4px;
-							height: 100%;
-							background-color: $red;
-							position: absolute;
-							left: 4px;
-							top: 0;
-							@include mq('sp-down'){
-								left: 0px;
-							}
-						}
-						&::after{
-							content: "";
-							width: 4px;
-							height: 100%;
-							background-color: $red;
-							position: absolute;
-							right: 4px;
-							top: 0;
-							@include mq('sp-down'){
-								right: 0px;
-							}
-						}
+
 					}
 				}
 				.box-in-box{
@@ -1484,6 +1499,7 @@ header{
 							margin-right: 10px;
 							padding-left: 0;
 							padding-right: 0;
+							font-size: vw2(18);
 							width: calc(100% - 20px);
 						}
 					}
@@ -1717,8 +1733,8 @@ header{
 									display: inline;
 									position: relative;
 									.ab{
-										position: absolute;
-										left: -35px;
+										margin-right: -15px;
+										margin-left: -35px;
 									}
 								}
 								.daikan-img{
@@ -1733,6 +1749,10 @@ header{
 										font-weight: normal;
 										position: absolute;
 										right: 4px;
+										top: -10px;
+										@include mq('sp-down'){
+											top: 0;
+										}
 									}
 									.opa0{
 										opacity: 0;
@@ -2844,7 +2864,7 @@ header{
 					@include mq('sp-down'){
 						padding-bottom: vw2(40);
 						width: vw2(265);
-						margin-left: vw2(-30);
+						margin-left: vw2(-20);
 					}
 					.reserve-btn{
 						background-image: linear-gradient(to left, #dc2424 0%, #480048 100%);
