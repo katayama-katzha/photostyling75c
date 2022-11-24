@@ -1574,6 +1574,11 @@ header{
 								padding-left: vw2(25);
 							}
 						}
+						.hiro-td{
+							@include mq('sp-down'){
+								padding-left: vw2(20);
+							}
+						}
 						.daikan-td{
 							
 							@include mq('sp-up'){

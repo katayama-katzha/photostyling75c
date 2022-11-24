@@ -1659,6 +1659,11 @@ header .burger.active span:last-child {
     padding-left: 6.4102564103vw;
   }
 }
+@media (max-width: 767px) {
+  .studio .section-inner .box .content .shop-about td .hiro-td {
+    padding-left: 5.1282051282vw;
+  }
+}
 @media (min-width: 768px) {
   .studio .section-inner .box .content .shop-about td .daikan-td {
     padding-left: 50px;
