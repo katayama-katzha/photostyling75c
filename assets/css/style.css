@@ -285,10 +285,27 @@ header .header-inner .logo, header .header-inner .reserve-btn {
 header .header-inner .logo {
   left: 0;
   height: 64px;
+  padding: 10px;
+  display: block;
+}
+header .header-inner .logo .logo-b {
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 75.422px;
+  height: 36px;
+}
+@media (min-width: 768px) {
+  header .header-inner .logo .logo-b {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   header .header-inner .logo {
     height: 50px;
+    padding: 7px;
   }
 }
 header .header-inner .logo img {
@@ -378,6 +395,15 @@ header .header-inner ul li a::after {
 
 header.bottomScroll .burger span {
   background-color: #1a1a1a;
+}
+@media (max-width: 767px) {
+  header.bottomScroll .header-inner .logo .logo-w {
+    display: none;
+  }
+  header.bottomScroll .header-inner .logo .logo-b {
+    display: block;
+    opacity: 1;
+  }
 }
 header .burger {
   height: 50px;

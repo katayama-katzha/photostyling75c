@@ -309,8 +309,24 @@ header{
 		.logo{
 			left: 0;
 			height: 64px;
+			padding: 10px;
+			display: block;
+			.logo-b{
+				opacity: 0;
+				transition: all .3s;
+				position: absolute;
+				left: 7px;
+				top: 7px;
+				width: 75.422px;
+				height: 36px;
+				@include mq('sp-up'){
+					display: none;
+				}
+			}
 			@include mq('sp-down'){
 				height: 50px;
+				padding: 7px;
+				
 			}
 			img{
 				height: 100%;
@@ -402,6 +418,20 @@ header{
 				background-color: #1a1a1a;
 			}
 		}
+		@include mq('sp-down'){
+			.header-inner{
+				.logo{
+					.logo-w{
+						display: none;
+					}
+					.logo-b{
+						display: block;
+						opacity: 1;
+					}
+				}
+			}
+		}
+
 	}
 	.burger{
 		@include mq('sp-up'){
