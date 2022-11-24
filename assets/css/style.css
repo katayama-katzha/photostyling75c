@@ -1576,7 +1576,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th .th-wrapper {
-    padding-left: 6.4102564103vw;
+    padding-left: 5.1282051282vw;
   }
 }
 .studio .section-inner .box .content .shop-about th .th-wrapper::before {
