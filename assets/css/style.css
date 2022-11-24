@@ -330,7 +330,7 @@ header .header-inner ul {
     width: 198px;
     padding-top: 0px;
     transition: all 0.3s;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
   }
   header .header-inner ul.active {
     right: 0;
@@ -355,7 +355,8 @@ header .header-inner ul li a {
 }
 @media (max-width: 767px) {
   header .header-inner ul li a {
-    font-size: 16px;
+    font-size: 15px;
+    white-space: nowrap;
   }
 }
 header .header-inner ul li a::after {
