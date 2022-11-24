@@ -121,57 +121,40 @@ a {
 
 .totop {
   position: fixed;
-  width: 45px;
-  height: 45px;
+  width: 80px;
+  height: 80px;
   background-image: linear-gradient(to left, #3a1c71 0%, #ffaf7b 100%);
   border: none;
-  border-radius: 99px;
+  border-radius: 20px;
   right: 70px;
   z-index: 99;
   bottom: 70px;
   opacity: 0;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.totop img {
+  width: 40px;
+  height: auto;
+}
+.totop span {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
 }
 @media (max-width: 1024px) {
   .totop {
     right: 30px;
     bottom: 50px;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   }
-}
-.totop::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 15px;
-  background-color: white;
-  top: 20px;
-  left: 9.5px;
-  transform: rotate(-45deg);
-}
-@media (max-width: 1024px) {
-  .totop::after {
-    width: 20px;
-    left: 8px;
-    top: 22px;
-  }
-}
-.totop::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 15px;
-  background-color: white;
-  top: 20px;
-  right: 9.5px;
-  transform: rotate(45deg);
-}
-@media (max-width: 1024px) {
-  .totop::before {
-    width: 20px;
-    right: 8px;
-    top: 22px;
+  .totop img {
+    width: 30px;
   }
 }
 .totop.bottomScroll {
@@ -444,6 +427,11 @@ header .burger.active span:last-child {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 767px) {
+  .reserve-btn {
+    background-image: linear-gradient(-110deg, #3a1c71 2%, #d76d77 58%, #ffaf7b 103%);
+  }
+}
 .reserve-btn::before {
   content: "";
   display: block;
@@ -471,6 +459,32 @@ header .burger.active span:last-child {
   }
 }
 
+@keyframes bb {
+  0% {
+    border-right: 1px solid #3a1c71;
+    border-left: 1px solid #ffaf7b;
+  }
+  100% {
+    border-left: 1px solid #3a1c71;
+    border-right: 1px solid #ffaf7b;
+  }
+}
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dokidoki {
+  0%, 40%, 60%, 80% {
+    transform: scale(1);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
 .fv {
   width: 100%;
   height: 49.7916666667vw;
@@ -1185,6 +1199,9 @@ header .burger.active span:last-child {
     padding-right: unset;
     margin-top: 20.5128205128vw;
   }
+  .cta .contact .line-btn {
+    animation: dokidoki 2s ease-in-out 0.5s infinite alternate;
+  }
 }
 .cta .contact::after {
   width: 1px;
@@ -1210,6 +1227,17 @@ header .burger.active span:last-child {
 @media (max-width: 767px) {
   .cta .booking {
     padding-left: unset;
+  }
+}
+@media (max-width: 767px) {
+  .cta .booking .reserve-btn {
+    border-left: unset;
+    border-right: unset;
+    animation: dokidoki 2s ease-in-out 0s infinite alternate;
+    border: none;
+  }
+  .cta .booking .reserve-btn::before {
+    animation: opa 2s ease-in-out 0s infinite alternate;
   }
 }
 
@@ -1526,7 +1554,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th, .studio .section-inner .box .content .shop-about td {
-    font-size: 12px;
+    font-size: 3.0769230769vw;
   }
 }
 .studio .section-inner .box .content .shop-about th {
@@ -1535,7 +1563,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th {
-    width: 80px;
+    width: 20.5128205128vw;
   }
 }
 .studio .section-inner .box .content .shop-about th .th-wrapper {
@@ -1545,7 +1573,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th .th-wrapper {
-    padding-left: 15px;
+    padding-left: 6.4102564103vw;
   }
 }
 .studio .section-inner .box .content .shop-about th .th-wrapper::before {
@@ -1565,6 +1593,11 @@ header .burger.active span:last-child {
 @media (min-width: 768px) {
   .studio .section-inner .box .content .shop-about th .daikan-th {
     padding-left: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .studio .section-inner .box .content .shop-about th .daikan-th {
+    padding-left: 15.3846153846vw;
   }
 }
 .studio .section-inner .box .content .shop-about td {
@@ -1592,6 +1625,7 @@ header .burger.active span:last-child {
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about td .td-wrapper {
     padding-right: 0px;
+    padding-left: 6.4102564103vw;
   }
 }
 @media (min-width: 768px) {
@@ -1599,9 +1633,19 @@ header .burger.active span:last-child {
     padding-left: 50px;
   }
 }
+@media (max-width: 767px) {
+  .studio .section-inner .box .content .shop-about td .daikan-td {
+    padding-left: 12.8205128205vw;
+  }
+}
 @media (min-width: 768px) {
   .studio .section-inner .box .content .shop-about td .daikan-td2 {
     padding-left: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .studio .section-inner .box .content .shop-about td .daikan-td2 {
+    padding-left: 12.8205128205vw;
   }
 }
 .studio .section-inner .box .content .shop-about tr {
@@ -2977,6 +3021,11 @@ header .burger.active span:last-child {
     max-width: 67.9487179487vw;
   }
 }
+@media (max-width: 767px) {
+  .showtime .section-inner .white-wrapper .btn-wrapper .line-btn {
+    animation: dokidoki 2s ease-in-out 0.5s infinite alternate;
+  }
+}
 .showtime .section-inner .white-wrapper::after {
   content: "";
   width: 15.2013888889vw;
@@ -3120,6 +3169,14 @@ header .burger.active span:last-child {
     border-left: 1px solid #dc2424;
   }
 }
+@media (max-width: 767px) {
+  .showtime .section-inner .white2 .inner .btn-wrapper .reserve-btn {
+    animation: dokidoki 2s ease-in-out 0s infinite alternate;
+  }
+  .showtime .section-inner .white2 .inner .btn-wrapper .reserve-btn::before {
+    animation: opa 2s ease-in-out 0s infinite alternate;
+  }
+}
 
 footer {
   padding-right: 17.3611111111vw;
@@ -3181,6 +3238,7 @@ footer ul {
 }
 @media (max-width: 767px) {
   footer ul {
+    display: none;
     flex-wrap: wrap;
   }
 }
@@ -3196,4 +3254,12 @@ footer ul li {
 }
 footer ul li:last-child {
   margin-right: 0;
+}
+footer .sp-ul {
+  display: none;
+}
+@media (max-width: 767px) {
+  footer .sp-ul {
+    display: flex;
+  }
 }
