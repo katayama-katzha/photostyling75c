@@ -160,7 +160,7 @@ a {
 .totop.bottomScroll {
   opacity: 1;
 }
-.totop.clickad {
+.totop.bottomScroll2 {
   opacity: 0;
 }
 
@@ -326,10 +326,11 @@ header .header-inner ul {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     width: 198px;
-    padding-top: 100px;
+    padding-top: 0px;
     transition: all 0.3s;
+    padding-bottom: 50px;
   }
   header .header-inner ul.active {
     right: 0;
@@ -344,7 +345,7 @@ header .header-inner ul li {
 }
 @media (max-width: 767px) {
   header .header-inner ul li {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 header .header-inner ul li a {
@@ -354,7 +355,7 @@ header .header-inner ul li a {
 }
 @media (max-width: 767px) {
   header .header-inner ul li a {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 header .header-inner ul li a::after {

@@ -197,7 +197,7 @@ a {
 	&.bottomScroll{
 		opacity: 1;
 	}
-	&.clickad{
+	&.bottomScroll2{
 		opacity: 0;
 	}
 }
@@ -345,10 +345,11 @@ header{
 				height: 100vh;
 				background-color: rgba(0,0,0,0.9);
 				flex-direction: column;
-				justify-content: flex-start;
+				justify-content: center;
 				width: 198px;
-				padding-top: 100px;
+				padding-top: 0px;
 				transition: all .3s;
+				padding-bottom: 50px;
 				&.active{
 					right: 0;
 				}
@@ -360,14 +361,14 @@ header{
 				margin-right: vw(24);
 				margin-left: vw(24);
 				@include mq('sp-down'){
-					margin-bottom: 20px;
+					margin-bottom: 30px;
 				}
 				a{
 					font-size: vw(14);
 					color: white;
 					position: relative;
 					@include mq('sp-down'){
-						font-size: 12px;
+						font-size: 16px;
 					}
 					&::after{
 						content: "";

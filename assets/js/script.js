@@ -67,10 +67,7 @@ jQuery(function($){
       $('.menu').toggleClass('active');
       e.preventDefault();
     });
-    $( '.totop' ).on( 'click', function(e){
-      $(this).addClass('clickad');
-      e.preventDefault();
-    });
+
     $( '.menu a' ).on( 'click', function(e){
       $('.burger').removeClass('active');
       $('.menu').removeClass('active');
@@ -81,6 +78,25 @@ jQuery(function($){
       $(this).next().slideToggle(600);
       e.preventDefault();
     });
+  });
+
+  $(window).scroll(function(){
+    var top = $("#showtime").offset().top; // ターゲットの位置取得
+    if($(window).height() > top) {
+    // 最初に#btnBlockが見えている場合
+        if($(window).scrollTop() > top){
+
+        }else{
+
+        }
+    }else{
+    // 最初に#btnBlockが見えていない場合
+        if($(window).scrollTop() + $(window).height() > top ){
+          $(".totop").addClass('bottomScroll2');
+        }else{
+          $(".totop").removeClass('bottomScroll2');
+        }
+    }
   });
 
 
