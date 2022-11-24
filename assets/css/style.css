@@ -257,7 +257,7 @@ main {
 }
 
 .number {
-  font-family: "Baskerville";
+  font-family: "Baskerville", "baskerville-urw", serif;
 }
 
 .en {
@@ -1597,7 +1597,7 @@ header .burger.active span:last-child {
     margin-right: 10px;
     padding-left: 0;
     padding-right: 0;
-    font-size: 4.6153846154vw;
+    font-size: 18px;
     width: calc(100% - 20px);
   }
 }
