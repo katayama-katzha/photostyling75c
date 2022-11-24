@@ -67,6 +67,10 @@ jQuery(function($){
       $('.menu').toggleClass('active');
       e.preventDefault();
     });
+    $( '.totop' ).on( 'click', function(e){
+      $(this).addClass('clickad');
+      e.preventDefault();
+    });
     $( '.menu a' ).on( 'click', function(e){
       $('.burger').removeClass('active');
       $('.menu').removeClass('active');

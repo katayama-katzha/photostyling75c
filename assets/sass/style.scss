@@ -197,6 +197,9 @@ a {
 	&.bottomScroll{
 		opacity: 1;
 	}
+	&.clickad{
+		opacity: 0;
+	}
 }
 
 #loading {

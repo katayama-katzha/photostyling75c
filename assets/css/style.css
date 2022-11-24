@@ -160,6 +160,9 @@ a {
 .totop.bottomScroll {
   opacity: 1;
 }
+.totop.clickad {
+  opacity: 0;
+}
 
 #loading {
   width: 100vw;
