@@ -647,11 +647,22 @@ header .burger.active span:last-child {
   font-size: 7.4305555556vw;
   font-weight: bold;
   padding-left: 1.3888888889vw;
+  display: flex;
+  padding-top: 0.6944444444vw;
+  padding-bottom: 0.6944444444vw;
+}
+.fv .circle h3 img {
+  width: 10.7638888889vw;
 }
 @media (max-width: 767px) {
   .fv .circle h3 {
     font-size: 27.4358974359vw;
     padding-left: 5.1282051282vw;
+    padding-top: 2.5641025641vw;
+    padding-bottom: 2.5641025641vw;
+  }
+  .fv .circle h3 img {
+    width: 39.7435897436vw;
   }
 }
 .fv .circle h3 span {
@@ -828,11 +839,17 @@ header .burger.active span:last-child {
   font-style: italic;
   font-weight: 600;
 }
+.about .section-inner .right .ttl-wrapper .number img {
+  width: 21.7361111111vw;
+}
 @media (max-width: 767px) {
   .about .section-inner .right .ttl-wrapper .number {
     font-size: 19.4871794872vw;
     position: relative;
     left: -5px;
+  }
+  .about .section-inner .right .ttl-wrapper .number img {
+    width: 50vw;
   }
 }
 .about .section-inner .right .ttl-wrapper .ttl-right {

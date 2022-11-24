@@ -647,10 +647,20 @@ header{
 			font-size: vw(107);
 			font-weight: bold;
 			padding-left: vw(20);
-
+			display: flex;
+			padding-top: vw(10);
+			padding-bottom: vw(10);
+			img{
+				width: vw(155);
+			}
 			@include mq('sp-down'){
 				font-size: vw2(107);
 				padding-left: vw2(20);
+				padding-top: vw2(10);
+				padding-bottom: vw2(10);
+				img{
+					width: vw2(155);
+				}
 
 			}
 			span{
@@ -802,8 +812,14 @@ header{
 					letter-spacing: -0.04em;
 					font-style: italic;
 					font-weight: 600;
+					img{
+						width: vw(313);
+					}
 					@include mq('sp-down'){
 						font-size: vw2(76);
+						img{
+							width: vw2(195);
+						}
 						position: relative;
 						left: -5px;
 					}
