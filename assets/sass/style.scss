@@ -9,6 +9,11 @@ $red2:#d5c1b9;
 $en:"Josefin Sans";
 $hikki:"Allura";
 
+@font-face {
+	font-family: 'MyFont';
+	src: url(../fonts/BASKE1.ttf);
+}
+
 // ブレークポイント
 $breakpoints: (
 	"sp-down": "(max-width: 767px)",
@@ -26,7 +31,7 @@ $breakpoints: (
 	}
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 $baseWidth : 1440;
  	@function vw($pixelsVw) {
@@ -283,7 +288,7 @@ main{
 	font-family: $hikki;
 }
 .number{
-	font-family: 'Baskerville','baskerville-urw',serif;
+	font-family: 'MyFont',"Baskerville",'baskerville-urw',serif;
 }
 .en{
 	font-family: $en;
@@ -540,6 +545,7 @@ header{
 				letter-spacing: 0.04em;
 				font-weight: bold;
 				padding-bottom: vw(38);
+				white-space: nowrap;
 				@include mq('sp-down'){
 					font-size: vw2(32);
 				}
@@ -641,9 +647,11 @@ header{
 			font-size: vw(107);
 			font-weight: bold;
 			padding-left: vw(20);
+
 			@include mq('sp-down'){
 				font-size: vw2(107);
 				padding-left: vw2(20);
+
 			}
 			span{
 				font-size: vw(48);
@@ -796,6 +804,8 @@ header{
 					font-weight: 600;
 					@include mq('sp-down'){
 						font-size: vw2(76);
+						position: relative;
+						left: -5px;
 					}
 				}
 				.ttl-right{
@@ -805,8 +815,9 @@ header{
 					align-items: center;
 					position: relative;
 					top: vw(-10);
+					white-space: nowrap;
 					@include mq('sp-down'){
-						padding-left: vw2(10);
+						padding-left: vw2(0);
 						top: vw2(-10);
 					}
 					.border{

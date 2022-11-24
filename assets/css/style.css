@@ -1,5 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@font-face {
+  font-family: "MyFont";
+  src: url(../fonts/BASKE1.ttf);
+}
 /* リセットCSS
 ===================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -257,7 +261,7 @@ main {
 }
 
 .number {
-  font-family: "Baskerville", "baskerville-urw", serif;
+  font-family: "MyFont", "Baskerville", "baskerville-urw", serif;
 }
 
 .en {
@@ -524,6 +528,7 @@ header .burger.active span:last-child {
   letter-spacing: 0.04em;
   font-weight: bold;
   padding-bottom: 2.6388888889vw;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .fv .section-inner .left h1 {
@@ -826,6 +831,8 @@ header .burger.active span:last-child {
 @media (max-width: 767px) {
   .about .section-inner .right .ttl-wrapper .number {
     font-size: 19.4871794872vw;
+    position: relative;
+    left: -5px;
   }
 }
 .about .section-inner .right .ttl-wrapper .ttl-right {
@@ -835,10 +842,11 @@ header .burger.active span:last-child {
   align-items: center;
   position: relative;
   top: -0.6944444444vw;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .about .section-inner .right .ttl-wrapper .ttl-right {
-    padding-left: 2.5641025641vw;
+    padding-left: 0vw;
     top: -2.5641025641vw;
   }
 }
