@@ -1576,7 +1576,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th .th-wrapper {
-    padding-left: 5.1282051282vw;
+    padding-left: 3.8461538462vw;
   }
 }
 .studio .section-inner .box .content .shop-about th .th-wrapper::before {
@@ -1600,7 +1600,7 @@ header .burger.active span:last-child {
 }
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about th .daikan-th {
-    padding-left: 15.3846153846vw;
+    padding-left: 12.8205128205vw;
   }
 }
 .studio .section-inner .box .content .shop-about td {

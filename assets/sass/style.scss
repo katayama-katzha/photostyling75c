@@ -1493,7 +1493,7 @@ header{
 							padding-left: 30px;
 							color: $red;
 							@include mq('sp-down'){
-								padding-left: vw2(20);
+								padding-left: vw2(15);
 							}
 							&::before{
 								content: "";
@@ -1515,7 +1515,7 @@ header{
 								padding-left: 60px;
 							}
 							@include mq('sp-down'){
-								padding-left: vw2(60);
+								padding-left: vw2(50);
 							}
 						}
 					}
