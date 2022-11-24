@@ -1562,6 +1562,11 @@ header .burger.active span:last-child {
     left: 2px;
   }
 }
+@media (min-width: 768px) {
+  .studio .section-inner .box .content .shop-about th .daikan-th {
+    padding-left: 60px;
+  }
+}
 .studio .section-inner .box .content .shop-about td {
   width: 100%;
 }
@@ -1587,6 +1592,16 @@ header .burger.active span:last-child {
 @media (max-width: 767px) {
   .studio .section-inner .box .content .shop-about td .td-wrapper {
     padding-right: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .studio .section-inner .box .content .shop-about td .daikan-td {
+    padding-left: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .studio .section-inner .box .content .shop-about td .daikan-td2 {
+    padding-left: 45px;
   }
 }
 .studio .section-inner .box .content .shop-about tr {

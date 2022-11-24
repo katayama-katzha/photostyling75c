@@ -1467,6 +1467,12 @@ header{
 							}
 
 						}
+						.daikan-th{
+							
+							@include mq('sp-up'){
+								padding-left: 60px;
+							}
+						}
 					}
 					td{
 						width: 100%;
@@ -1488,6 +1494,18 @@ header{
 							}
 							@include mq('sp-down'){
 								padding-right: 0px;
+							}
+						}
+						.daikan-td{
+							
+							@include mq('sp-up'){
+								padding-left: 50px;
+							}
+						}
+						.daikan-td2{
+							
+							@include mq('sp-up'){
+								padding-left: 45px;
 							}
 						}
 					}
